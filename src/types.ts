@@ -7,9 +7,14 @@ export type Variables = Record<string, [Color, Color]>;
 export type ColorModeToggleProps = PropsWithChildren<{
   theme: Dict;
   customVariables: Variables;
-  initialColorMode: ColorMode;
+  initialColorMode?: ColorMode;
 }>;
 export type ColorModeContextValue = {
   colorMode: ColorMode;
   toggleColorMode: () => void;
+};
+export type ToggleColorVariablesParameters = {
+  theme: Dict;
+  colorMode: ColorMode;
+  customVariables: Variables;
 };
